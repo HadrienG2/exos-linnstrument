@@ -24,7 +24,7 @@ fn main() {
             "vi IV I V",
         ],
         // Faites avec I, ii, et un mélange de IV, V et vi
-        &["I IV ii V", "I vi ii V", "I vi IV ii"],
+        &["I IV ii V", "I vi ii V", "I vi IV ii", "ii V I"],
         // Faites avec I, iii, V et iv
         &["I iii vi V", "I vi iii V"],
         // Autres progressions, pas groupées pour l'instant
@@ -66,8 +66,7 @@ fn main() {
         &["I VII IV I"],
     ];
     let prog_mineur: &[&[&str]] = &[
-        &["i i/7 IV/b4 VI"],
-        &["i III IVsus2"],
+        &["i III iv"],
         &["i III VII iv", "i III VII v"],
         &["i iv iim7b5 V"],
         &["i iv III VI"],
@@ -76,7 +75,6 @@ fn main() {
         &["i vi ii V"],
         &["i VI III VII"],
         &["i VII VI V", "i VII VI VII"],
-        &["ii V i"],
         &["iv v"],
     ];
     let prog_locrien: &[&[&str]] = &[
