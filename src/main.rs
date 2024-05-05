@@ -45,7 +45,7 @@ fn main() {
         &["i VII bVI IV"],
     ];
     let prog_phrygien: &[&[&str]] = &[
-        &["i bII"],
+        &["i II"],
         &["i II i vii"],
         &["i II III II"],
         &["i III vii II"],
