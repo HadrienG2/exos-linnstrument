@@ -77,12 +77,7 @@ fn main() {
         &["i VII VI V", "i VII VI VII"],
         &["iv v"],
     ];
-    let prog_locrien: &[&[&str]] = &[
-        &["i° II iii II"],
-        &["i° II iii iv"],
-        &["i iii7 i V7"],
-        &["i vii7 iv7 iii7"],
-    ];
+    let prog_locrien: &[&[&str]] = &[&["i° II iii II"], &["i° II iii iv"]];
 
     // === Toniques et modes travaillées ===
 
