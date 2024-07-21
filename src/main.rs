@@ -79,27 +79,28 @@ fn main() {
     ];
     let prog_locrien: &[&[&str]] = &[&["i° II iii II"], &["i° II iii iv"]];
 
-    // === Toniques et modes travaillées ===
+    // === Toniques et modes travaillés ===
 
-    // TODO: Découpler tonique et mode quand j'aurai plus d'expé
-    // TODO: Ajouter toniques altérées quand j'aurai encore plus d'expé
-    let toniques_modes = &[
-        ("C majeur", prog_majeur),
-        ("D dorien", prog_dorien),
-        ("E phrygien", prog_phrygien),
-        ("F lydien", prog_lydien),
-        ("G mixolydien", prog_mixolydien),
-        ("A mineur naturel", prog_mineur),
-        ("A mineur harmonique", prog_mineur),
-        ("A mineur mélodique", prog_mineur),
-        ("B locrien", prog_locrien),
+    // TODO: Ajouter toniques altérées quand j'aurai plus d'expé
+    let toniques = &['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    let modes = &[
+        ("majeur", prog_majeur),
+        ("dorien", prog_dorien),
+        ("phrygien", prog_phrygien),
+        ("lydien", prog_lydien),
+        ("mixolydien", prog_mixolydien),
+        ("mineur naturel", prog_mineur),
+        ("mineur harmonique", prog_mineur),
+        ("mineur mélodique", prog_mineur),
+        ("locrien", prog_locrien),
     ];
 
     // === Tirage au hasard du tout ===
 
     let mut rng = rand::thread_rng();
-    let (tonique_mode, progressions) = toniques_modes.choose(&mut rng).unwrap();
-    println!("Aujourd'hui on va travailler le mode {tonique_mode}");
+    let tonique = toniques.choose(&mut rng).unwrap();
+    let (mode, progressions) = modes.choose(&mut rng).unwrap();
+    println!("Aujourd'hui on va travailler {tonique} {mode}");
     let famille = progressions.choose(&mut rng).unwrap();
     let progression = famille.choose(&mut rng).unwrap();
     println!("Et la progression d'accords {progression}");
