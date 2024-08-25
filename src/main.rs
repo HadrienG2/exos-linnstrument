@@ -81,8 +81,8 @@ fn main() {
 
     // === Toniques et modes travaillés ===
 
-    // TODO: Ajouter toniques altérées quand j'aurai plus d'expé
     let toniques = &['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    let alterations = &["♭", "", "𝄰"];
     let modes = &[
         ("majeur", prog_majeur),
         ("dorien", prog_dorien),
@@ -99,8 +99,9 @@ fn main() {
 
     let mut rng = rand::thread_rng();
     let tonique = toniques.choose(&mut rng).unwrap();
+    let alteration = alterations.choose(&mut rng).unwrap();
     let (mode, progressions) = modes.choose(&mut rng).unwrap();
-    println!("Aujourd'hui on va travailler {tonique} {mode}");
+    println!("Aujourd'hui on va travailler {tonique}{alteration} {mode}");
     let famille = progressions.choose(&mut rng).unwrap();
     let progression = famille.choose(&mut rng).unwrap();
     println!("Et la progression d'accords {progression}");
